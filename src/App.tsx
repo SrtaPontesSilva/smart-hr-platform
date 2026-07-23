@@ -7,7 +7,7 @@ import LoginPage from './features/auth/LoginPage';
 import RegisterPage from './features/auth/RegisterPage';
 import CandidateProfilePage from './features/candidate/CandidateProfilePage';
 import CandidateRegistrationPage from './features/candidate/CandidateRegistrationPage';
-import FormContrato from './features/candidate/form p contrato/FormContrato';
+import FormContrato from './features/candidate/contract-form/FormContrato';
 import EmployeeProfilePage from './features/employee/EmployeeProfilePage';
 import EmployeeProfileViewPage from './features/employee/EmployeeProfileViewPage';
 import OffboardingDetailPage from './features/offboarding/OffboardingDetailPage';
@@ -26,8 +26,8 @@ import LayoutRH from './layout/RH/LayoutRH';
 import ProtectedRoute from './routes/ProtectedRoute';
 
 const App: React.FC = () => (
-  <ThemeProvider>
-    <Router>
+  <Router>
+    <ThemeProvider>
       <Routes>
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
@@ -61,8 +61,8 @@ const App: React.FC = () => (
           <Route path="offboarding/integrations" element={<OffboardingIntegrationsPage />} />
         </Route>
       </Routes>
-    </Router>
-  </ThemeProvider>
+    </ThemeProvider>
+  </Router>
 );
 
 export default App;

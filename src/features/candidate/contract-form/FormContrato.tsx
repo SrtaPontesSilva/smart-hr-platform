@@ -1,4 +1,4 @@
-// src/features/candidate/form p contrato/FormContrato.tsx
+// src/features/candidate/contract-form/FormContrato.tsx
 import React, { useState, useRef } from 'react';
 import { useForm, useFieldArray, FieldErrors, UseFormRegister } from 'react-hook-form';
 
