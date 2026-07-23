@@ -1,0 +1,13 @@
+{
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "postcss.validate": true,
+  "css.lint.unknownAtRules": "ignore",
+
+  // Melhorar IntelliSense do Tailwind
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "tailwindCSS.experimental.configFile": "frontend/tailwind.config.js"
+}

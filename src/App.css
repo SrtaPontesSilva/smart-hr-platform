@@ -1,0 +1,53 @@
+/* App.css — paleta simplificada (roxo como cor principal), status mantidos */
+.App { text-align: left; }
+
+.App-header {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding: 1.5rem;
+  transition: background-color .3s ease, color .3s ease;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.App-title {
+  font-size: clamp(1.25rem, 1.2vw + 1rem, 2rem);
+  font-weight: 700;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.App-content {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.App-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 4px 6px -1px var(--card-shadow), 0 2px 4px -1px var(--card-shadow);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  transition: box-shadow .3s ease, border-color .2s ease, transform .1s ease-in-out;
+}
+
+.App-card:hover {
+  transform: translateY(-1px);
+  border-color: rgba(94, 59, 255, 0.15);
+  box-shadow: 0 8px 14px rgba(94, 59, 255, 0.08);
+}
+
+.App-link { color: var(--primary); text-underline-offset: 2px; transition: color .15s ease; }
+.App-link:hover { color: var(--primary-dark); }
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Variáveis de tema — apenas roxo como cor principal */
+:root {
+  /* Cor principal */
+  --primary: #5E3BFF;
+  --primary-light: #8A65FF;
+  --primary-dark: #4A2BE6;
+
+  /* Neutros claros */
+  --text-primary: #1F2D3A;
+  --text-secondary: #4B5563;
+  --text-muted: #6B7280;
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F5F5F7;
+  --bg-tertiary: #E8EAF0;
+
+  /* States (mantidos) */
+  --success: #10B981;
+  --warning: #F59E0B;
+  --danger: #EF4444;
+
+  /* Gradiente apenas com roxo */
+  --gradient-primary: linear-gradient(135deg, #5E3BFF 0%, #8A65FF 100%);
+  --gradient-card: linear-gradient(135deg, rgba(94, 59, 255, 0.05) 0%, rgba(138, 101, 255, 0.05) 100%);
+}
+
+/* Tema escuro para área RH */
+.dark {
+  --primary: #8A65FF;
+  --primary-light: #9F7AFF;
+  --primary-dark: #5E3BFF;
+
+  /* Neutros escuros */
+  --text-primary: #F5F5F7;
+  --text-secondary: #D1D5DB;
+  --text-muted: #9CA3AF;
+  --bg-primary: #1F2D3A;
+  --bg-secondary: #2A2F3A;
+  --bg-tertiary: #374151;
+  
+  /* Cards */
+  --card-bg: #1F2D3A;
+  --card-border: rgba(94, 59, 255, 0.2);
+  --card-shadow: rgba(94, 59, 255, 0.1);
+}
+
+/* Tokens de Card no tema claro */
+:root, .candidate-theme, .rh-theme {
+  --card-bg: #FFFFFF;
+  --card-border: rgba(94, 59, 255, 0.1);
+  --card-shadow: rgba(94, 59, 255, 0.1);
+}
+
+/* Elementos base */
+html, body, #root {
+  height: 100%;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+a {
+  color: var(--primary);
+}
+a:hover {
+  color: var(--primary-dark);
+}
+
+/* Gradients utilitários */
+.innova-gradient { background: var(--gradient-primary); }
+.text-innova-gradient {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.innova-gradient-bg { background: var(--gradient-primary); }
+
+.innova-card-bg {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 4px 6px -1px var(--card-shadow), 0 2px 4px -1px var(--card-shadow);
+}
+
+/* Animações específicas */
+@keyframes innova-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(94, 59, 255, 0.4); }
+  50% { box-shadow: 0 0 0 10px rgba(94, 59, 255, 0); }
+}
+
+/* Botões utilitários */
+.btn-innova { @apply px-4 py-2 rounded-lg font-semibold transition; }
+.btn-innova-primary { background: var(--gradient-primary); color: white; }
+.btn-innova-primary:hover { filter: brightness(0.98); }
+.btn-innova-secondary { background: var(--bg-secondary); color: var(--text-primary); }
+
+/* Inputs */
+.input-innova {
+  background: #fff;
+  border: 1px solid rgba(94, 59, 255, 0.12);
+  border-radius: .5rem;
+  padding: .5rem .75rem;
+  transition: all .15s ease;
+}
+.input-innova:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(94, 59, 255, 0.12);
+  outline: none;
+}
+
+/* ===== Compatibilidade total dark para formulários e botões ===== */
+
+/* Inputs / Textareas / Select no modo escuro */
+.dark .input-innova {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  border: 1px solid var(--card-border);
+  caret-color: var(--primary);
+}
+.dark .input-innova::placeholder { color: var(--text-secondary); }
+
+/* Opções do <select> respeitando tema */
+select.input-innova option {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+.dark select.input-innova option {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Botão secundário coerente no escuro */
+.dark .btn-innova.btn-innova-secondary {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  border: 1px solid var(--card-border);
+}
+
+/* Responsividade */
+@media (max-width: 768px) { :root { font-size: 14px; } }
+@media (max-width: 480px) { :root { font-size: 13px; } }
+
+/* Tema específico para candidatos (sempre claro) */
+.candidate-theme {
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F5F5F7;
+  --bg-tertiary: #E8EAF0;
+  --text-primary: #1F2D3A;
+  --text-secondary: #4B5563;
+  --card-bg: #FFFFFF;
+  --card-border: rgba(94, 59, 255, 0.1);
+  --card-shadow: rgba(94, 59, 255, 0.1);
+}
+
+/* Tema específico para RH (suporta claro/escuro) */
+.rh-theme { transition: all 0.3s ease; }
+.rh-theme.dark {
+  --bg-primary: #1F2D3A;
+  --bg-secondary: #2A2F3A;
+  --bg-tertiary: #374151;
+  --text-primary: #F5F5F7;
+  --text-secondary: #D1D5DB;
+  --card-bg: #1F2D3A;
+  --card-border: rgba(94, 59, 255, 0.2);
+  --card-shadow: rgba(94, 59, 255, 0.1);
+}
+
+/* Cards com estilo mais harmonioso */
+.card-minimal {
+  background: white;
+  border: 1px solid rgba(94, 59, 255, 0.08);
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 4px rgba(94, 59, 255, 0.04);
+  transition: all 0.3s ease;
+}
+.card-minimal:hover {
+  border-color: rgba(94, 59, 255, 0.15);
+  box-shadow: 0 4px 8px rgba(94, 59, 255, 0.08);
+  transform: translateY(-1px);
+}

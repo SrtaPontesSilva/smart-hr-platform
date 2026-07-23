@@ -1,0 +1,1039 @@
+[
+  {
+    "displayName": "reportWebVitals",
+    "description": "",
+    "props": []
+  },
+  {
+    "displayName": "App",
+    "description": "",
+    "props": []
+  },
+  {
+    "displayName": "useLocalStorage",
+    "description": "Hook customizado para trabalhar com valores salvos no localStorage.\n- Inicializa o estado a partir do localStorage (se existir) ou usa o valor inicial fornecido.\n- Salva automaticamente no localStorage sempre que o estado for atualizado.\n- Oferece uma função de remoção para limpar a chave do localStorage.",
+    "props": []
+  },
+  {
+    "displayName": "TextInput",
+    "description": "",
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "type",
+        "type": "\"number\" | \"text\" | \"date\" | undefined",
+        "required": false,
+        "description": "",
+        "default": "text"
+      },
+      {
+        "name": "value",
+        "type": "string | number",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "onChange",
+        "type": "(value: string) => void",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "placeholder",
+        "type": "string | undefined",
+        "required": false,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "error",
+        "type": "string | undefined",
+        "required": false,
+        "description": "",
+        "default": null
+      }
+    ]
+  },
+  {
+    "displayName": "InputField",
+    "description": "",
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "type",
+        "type": "\"number\" | \"text\" | \"date\" | undefined",
+        "required": false,
+        "description": "",
+        "default": "text"
+      },
+      {
+        "name": "value",
+        "type": "string | number",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "onChange",
+        "type": "(value: string) => void",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "placeholder",
+        "type": "string | undefined",
+        "required": false,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "error",
+        "type": "string | undefined",
+        "required": false,
+        "description": "",
+        "default": null
+      }
+    ]
+  },
+  {
+    "displayName": "ResumeModal",
+    "description": "",
+    "props": [
+      {
+        "name": "resume",
+        "type": "Resume",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "onClose",
+        "type": "() => void",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "onPrev",
+        "type": "() => void",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "onNext",
+        "type": "() => void",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "hasPrev",
+        "type": "boolean",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "hasNext",
+        "type": "boolean",
+        "required": true,
+        "description": "",
+        "default": null
+      }
+    ]
+  },
+  {
+    "displayName": "Modal",
+    "description": "",
+    "props": [
+      {
+        "name": "title",
+        "type": "string",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "isOpen",
+        "type": "boolean",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "onClose",
+        "type": "() => void",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "footerActions",
+        "type": "ReactNode",
+        "required": false,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false,
+        "description": "",
+        "default": null
+      }
+    ]
+  },
+  {
+    "displayName": "ConfirmModal",
+    "description": "",
+    "props": [
+      {
+        "name": "isOpen",
+        "type": "boolean",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "title",
+        "type": "string | undefined",
+        "required": false,
+        "description": "",
+        "default": "Confirmação"
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "onConfirm",
+        "type": "() => void",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "onCancel",
+        "type": "() => void",
+        "required": true,
+        "description": "",
+        "default": null
+      }
+    ]
+  },
+  {
+    "displayName": "ProtectedRoute",
+    "description": "",
+    "props": [
+      {
+        "name": "requiredRole",
+        "type": "\"candidato\" | \"rh\"",
+        "required": true,
+        "description": "",
+        "default": null
+      }
+    ]
+  },
+  {
+    "displayName": "SidebarRH",
+    "description": "",
+    "props": [
+      {
+        "name": "isOpen",
+        "type": "boolean",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "toggleSidebar",
+        "type": "() => void",
+        "required": true,
+        "description": "",
+        "default": null
+      }
+    ]
+  },
+  {
+    "displayName": "LayoutRH",
+    "description": "",
+    "props": []
+  },
+  {
+    "displayName": "LayoutCandidato",
+    "description": "",
+    "props": []
+  },
+  {
+    "displayName": "HeaderRH",
+    "description": "",
+    "props": [
+      {
+        "name": "toggleSidebar",
+        "type": "() => void",
+        "required": true,
+        "description": "",
+        "default": null
+      }
+    ]
+  },
+  {
+    "displayName": "FooterRH",
+    "description": "",
+    "props": []
+  },
+  {
+    "displayName": "HeaderCandidato",
+    "description": "",
+    "props": []
+  },
+  {
+    "displayName": "FooterCandidato",
+    "description": "",
+    "props": []
+  },
+  {
+    "displayName": "VTVRManagementPage",
+    "description": "",
+    "props": []
+  },
+  {
+    "displayName": "MonitoringReportsPage",
+    "description": "",
+    "props": []
+  },
+  {
+    "displayName": "IndexPage",
+    "description": "",
+    "props": []
+  },
+  {
+    "displayName": "HiringManagementPage",
+    "description": "",
+    "props": []
+  },
+  {
+    "displayName": "DashboardRH",
+    "description": "",
+    "props": []
+  },
+  {
+    "displayName": "Curriculos",
+    "description": "",
+    "props": []
+  },
+  {
+    "displayName": "ContractSigningPage",
+    "description": "",
+    "props": []
+  },
+  {
+    "displayName": "CandidateValidationPage",
+    "description": "",
+    "props": []
+  },
+  {
+    "displayName": "CandidateProcessingPage",
+    "description": "",
+    "props": []
+  },
+  {
+    "displayName": "EmployeeProfileModal",
+    "description": "",
+    "props": [
+      {
+        "name": "employee",
+        "type": "EmployeeFull",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "onClose",
+        "type": "() => void",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "onSave",
+        "type": "(updatedEmployee: EmployeeFull) => void",
+        "required": true,
+        "description": "",
+        "default": null
+      }
+    ]
+  },
+  {
+    "displayName": "InformacoesComplementaresSection",
+    "description": "",
+    "props": [
+      {
+        "name": "employeeData",
+        "type": "EmployeeFull",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "isEditing",
+        "type": "boolean",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "updateField",
+        "type": "(field: keyof EmployeeFull, value: any) => void",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "updateNested",
+        "type": "(path: string[], value: any) => void",
+        "required": true,
+        "description": "",
+        "default": null
+      }
+    ]
+  },
+  {
+    "displayName": "GraficoObservacoesSection",
+    "description": "",
+    "props": [
+      {
+        "name": "chartData",
+        "type": "any",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "chartOptions",
+        "type": "any",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "dateFilter",
+        "type": "string",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "setDateFilter",
+        "type": "(value: string) => void",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "filteredObservations",
+        "type": "Observacao[]",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "showNewObservation",
+        "type": "boolean",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "newObservationText",
+        "type": "string",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "newObservationInputId",
+        "type": "string",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "setShowNewObservation",
+        "type": "(value: boolean) => void",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "setNewObservationText",
+        "type": "(value: string) => void",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "handleAddObservation",
+        "type": "() => void",
+        "required": true,
+        "description": "",
+        "default": null
+      }
+    ]
+  },
+  {
+    "displayName": "DocumentosAnexosSection",
+    "description": "",
+    "props": [
+      {
+        "name": "documents",
+        "type": "Document[] | undefined",
+        "required": false,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "isEditing",
+        "type": "boolean",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "showNewAttachment",
+        "type": "boolean",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "newAttachmentTitle",
+        "type": "string",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "fileInputId",
+        "type": "string",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "onToggleNewAttachment",
+        "type": "() => void",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "onFileChange",
+        "type": "(e: ChangeEvent<HTMLInputElement>) => void",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "onTitleChange",
+        "type": "(value: string) => void",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "onAddAttachment",
+        "type": "() => void",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "onCancelNewAttachment",
+        "type": "() => void",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "selectedAttachments",
+        "type": "number[]",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "toggleAttachmentSelection",
+        "type": "(index: number) => void",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "onRemoveSelectedAttachments",
+        "type": "() => void",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "onDocumentClick",
+        "type": "((document: Document, index: number) => void) | undefined",
+        "required": false,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "onRemoveDocument",
+        "type": "((index: number) => void) | undefined",
+        "required": false,
+        "description": "",
+        "default": null
+      }
+    ]
+  },
+  {
+    "displayName": "DadosPessoaisSection",
+    "description": "",
+    "props": [
+      {
+        "name": "employeeData",
+        "type": "EmployeeFull",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "isEditing",
+        "type": "boolean",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "updateField",
+        "type": "(field: keyof EmployeeFull, value: any) => void",
+        "required": true,
+        "description": "",
+        "default": null
+      }
+    ]
+  },
+  {
+    "displayName": "useEmployeeProfile",
+    "description": "",
+    "props": [
+      {
+        "name": "id",
+        "type": "number",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "nome",
+        "type": "string",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "cargo",
+        "type": "string",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "telefone",
+        "type": "string",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "pontuacaoIA",
+        "type": "number",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "curriculo",
+        "type": "string",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "observacoes",
+        "type": "string",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "email",
+        "type": "string",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "dataAdmissao",
+        "type": "string",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "iaData",
+        "type": "{ raiva: number; felicidade: number; tristeza: number; medo: number; nojo: number; }",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "observacoesDetalhadas",
+        "type": "{ id: number; data: string; texto: string; }[]",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "salario",
+        "type": "number",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "dadosBancarios",
+        "type": "{ banco: string; agencia: string; conta: string; }",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "valoresVT",
+        "type": "number",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "valoresVR",
+        "type": "number",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "contratoPdf",
+        "type": "string",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "documentosPessoais",
+        "type": "string[]",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "cpf",
+        "type": "string",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "rg",
+        "type": "string",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "dataExpedicaoRG",
+        "type": "string | undefined",
+        "required": false,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "ufRG",
+        "type": "string | undefined",
+        "required": false,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "nomeMae",
+        "type": "string | undefined",
+        "required": false,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "nomePai",
+        "type": "string | undefined",
+        "required": false,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "endereco",
+        "type": "string | undefined",
+        "required": false,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "cep",
+        "type": "string | undefined",
+        "required": false,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "dataNascimento",
+        "type": "string | undefined",
+        "required": false,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "localNascimento",
+        "type": "string | undefined",
+        "required": false,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "sexo",
+        "type": "string | undefined",
+        "required": false,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "estadoCivil",
+        "type": "string | undefined",
+        "required": false,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "grauInstrucao",
+        "type": "string | undefined",
+        "required": false,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "primeiroEmprego",
+        "type": "boolean | undefined",
+        "required": false,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "numeroPis",
+        "type": "string | undefined",
+        "required": false,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "certificadoReservista",
+        "type": "string | undefined",
+        "required": false,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "tituloEleitor",
+        "type": "string | undefined",
+        "required": false,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "zonaEleitoral",
+        "type": "string | undefined",
+        "required": false,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "secaoEleitoral",
+        "type": "string | undefined",
+        "required": false,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "cnhNumero",
+        "type": "string | undefined",
+        "required": false,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "cnhValidade",
+        "type": "string | undefined",
+        "required": false,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "cnhUF",
+        "type": "string | undefined",
+        "required": false,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "cnhCategoria",
+        "type": "string | undefined",
+        "required": false,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "cnhDataExpedicao",
+        "type": "string | undefined",
+        "required": false,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "cnhPrimeiraHabilitacao",
+        "type": "string | undefined",
+        "required": false,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "raca",
+        "type": "string | undefined",
+        "required": false,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "dependentes",
+        "type": "{ nome: string; dataNascimento: string; cpf: string; }[] | undefined",
+        "required": false,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "informacoesAdicionais",
+        "type": "{ menorDeIdade: boolean; responsavel?: { nome: string; cpfRg: string; endereco: string; telefone: string; email: string; } | undefined; contatosEmergencia: { nome: string; telefone: string; email: string; parentesco: string; }[]; ... 5 more ...; formaPagamento: string; }",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "documentosAnexos",
+        "type": "{ title: string; filename: string; date: string; }[] | undefined",
+        "required": false,
+        "description": "",
+        "default": null
+      }
+    ]
+  },
+  {
+    "displayName": "EmployeeProfilePage",
+    "description": "",
+    "props": []
+  },
+  {
+    "displayName": "EmployeeProfileForm",
+    "description": "",
+    "props": [
+      {
+        "name": "employee",
+        "type": "EmployeeFormData",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "onSubmit",
+        "type": "(data: EmployeeFormData) => void",
+        "required": true,
+        "description": "",
+        "default": null
+      }
+    ]
+  },
+  {
+    "displayName": "ResumeCard",
+    "description": "",
+    "props": [
+      {
+        "name": "resume",
+        "type": "Resume",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "onClick",
+        "type": "() => void",
+        "required": true,
+        "description": "",
+        "default": null
+      }
+    ]
+  },
+  {
+    "displayName": "CandidateRegistrationPage",
+    "description": "",
+    "props": []
+  },
+  {
+    "displayName": "CandidateProfilePage",
+    "description": "COMPONENTE PRINCIPAL *",
+    "props": []
+  },
+  {
+    "displayName": "RegisterPage",
+    "description": "",
+    "props": []
+  },
+  {
+    "displayName": "LoginPage",
+    "description": "",
+    "props": []
+  },
+  {
+    "displayName": "ThemeProvider",
+    "description": "",
+    "props": []
+  }
+]
